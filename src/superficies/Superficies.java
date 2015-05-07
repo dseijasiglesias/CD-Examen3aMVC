@@ -44,7 +44,13 @@ public class Superficies {
                 break;
             
             case "triangle":
+                Vista.askBase(mod);
+                Vista.askHeight(mod);
                 
+                area = (float) (0.5 * mod.getLength() * mod.getHeight());
+                mod.setArea(area);
+                
+                Vista.showArea(mod);
                 break;
             
             case "circle":
@@ -70,18 +76,7 @@ public class Superficies {
             System.out.println("The area for your rectangle is: " + rectangleArea);
 
         }
-        if (shapeType.equals("triangle")) {
-            //add area calculations for triangle here
-
-
-            System.out.println("What is the base length of the triangle?");
-            baseLength = sc.nextFloat();
-            System.out.println("What is the height of the triangle?");
-            height = sc.nextFloat();
-            triangleArea = (float) (0.5 * baseLength * height);
-            System.out.println("Your triangles area is: " + triangleArea);
-
-        }
+        
         
     }
     
