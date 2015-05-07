@@ -46,4 +46,16 @@ public class Vista {
         System.out.println("What is the height of the triangle?");
         mod.setHeight(sc.nextFloat());
     }
+    
+    public static void askWidth(Modelo mod){
+        System.out.println("what is the rectangles width?");
+        mod.setLength(sc.nextFloat());
+    }
+    
+    public static void askRHeight(Modelo mod){
+        System.out.println("What is the rectangles height?");
+        mod.setHeight(sc.nextFloat());
+    }
+    
+    
 }
