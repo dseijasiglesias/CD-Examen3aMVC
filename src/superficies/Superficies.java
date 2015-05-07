@@ -40,7 +40,13 @@ public class Superficies {
                 break;
             
             case "rectangle":
+                Vista.askWidth(mod);
+                Vista.askRHeight(mod);
                 
+                area = mod.getLength() * mod.getHeight();
+                mod.setArea(area);
+                
+                Vista.showArea(mod);
                 break;
             
             case "triangle":
@@ -64,19 +70,6 @@ public class Superficies {
                 break;
             
         }
-        
-        if (shapeType.equals("rectangle")) {
-            //add area calculations for rectangle here
-            
-            System.out.println("what is the rectangles width?");
-            sideLength = sc.nextFloat();
-            System.out.println("What is the rectangles height?");
-            sideHeight = sc.nextFloat();
-            rectangleArea = sideLength * sideHeight;
-            System.out.println("The area for your rectangle is: " + rectangleArea);
-
-        }
-        
         
     }
     
