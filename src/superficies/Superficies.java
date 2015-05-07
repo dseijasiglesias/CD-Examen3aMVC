@@ -15,12 +15,20 @@ public class Superficies {
      */
     public static void main(String[] args) {
         
-        String shapeType;
-        
         Modelo mod = new Modelo();
         Vista.askType(mod);
+        
+        Superficies.shapeType(mod);
+        
+        
+
+    }
+    
+    public static void shapeType(Modelo mod){
+        String shapeType;
         shapeType = mod.getShapeType();
         
+        Scanner sc = new Scanner(System.in);
         
         if (shapeType.equals("square")) {
             //add area calculations for square
@@ -73,6 +81,7 @@ public class Superficies {
             System.out.println("Your Circles area is " + circleArea);
 
         }
-
+        
     }
+    
 }
