@@ -48,7 +48,13 @@ public class Superficies {
                 break;
             
             case "circle":
+                Vista.askRadius(mod);
                 
+                area = mod.getRadius() * mod.getRadius();
+                area = (float) (3.14159265 * area);
+                mod.setArea(area);
+                
+                Vista.showArea(mod);
                 break;
             
         }
@@ -74,17 +80,6 @@ public class Superficies {
             height = sc.nextFloat();
             triangleArea = (float) (0.5 * baseLength * height);
             System.out.println("Your triangles area is: " + triangleArea);
-
-        }
-        if (shapeType.equals("circle")) {
-            //add area calculations for a circle here
-            
-
-            System.out.println("What is the radius of the circle?");
-            radius = sc.nextFloat();
-            circleArea = radius * radius;
-            circleArea = (float) (3.14159265 * circleArea);
-            System.out.println("Your Circles area is " + circleArea);
 
         }
         
