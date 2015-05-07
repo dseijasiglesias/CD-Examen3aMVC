@@ -32,6 +32,9 @@ public class Vista {
         mod.setLength(sc.nextFloat());
     }
     
-    
+    public static void askRadius(Modelo mod){
+        System.out.println("What is the radius of the circle?");
+        mod.setRadius(sc.nextFloat());
+    }
     
 }
