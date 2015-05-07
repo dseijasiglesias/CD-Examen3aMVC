@@ -5,7 +5,8 @@ import java.util.Scanner;
 /**
  * Examen de MVC 3ª Avaliación
  *
- * @author damian
+ * @version 2.0
+ * @author Daniel Seijas
  */
 public class Superficies {
 
