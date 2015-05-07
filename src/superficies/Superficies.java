@@ -1,7 +1,5 @@
 package superficies;
 
-import java.util.Scanner;
-
 /**
  * Examen de MVC 3ª Avaliación
  *
@@ -11,6 +9,7 @@ import java.util.Scanner;
 public class Superficies {
     
     /**
+     * Runnable Method
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -19,11 +18,16 @@ public class Superficies {
         Vista.askType(mod);
         
         Superficies.shapeType(mod);
-        
-        
-
     }
     
+    /**
+     * Metodo que contiene la logica del programa
+     * segun el tipo de objeto que el usuario a pedido clacular su area, 
+     * el metodo tras un switch hará llamamientos a la clase vista para pedir 
+     * al usuario que introduzca manualmente distintos datos para poder calcular
+     * el area del objeto que a pedido con anterioridad
+     * @param mod Objeto Modelo
+     */
     public static void shapeType(Modelo mod){
         String shapeType = mod.getShapeType();
         float area;
