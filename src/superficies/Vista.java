@@ -37,4 +37,13 @@ public class Vista {
         mod.setRadius(sc.nextFloat());
     }
     
+    public static void askBase(Modelo mod){
+        System.out.println("What is the base length of the triangle?");
+        mod.setLength(sc.nextFloat());
+    }
+    
+    public static void askHeight(Modelo mod){
+        System.out.println("What is the height of the triangle?");
+        mod.setHeight(sc.nextFloat());
+    }
 }
