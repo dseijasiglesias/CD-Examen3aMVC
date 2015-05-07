@@ -25,28 +25,37 @@ public class Superficies {
     }
     
     public static void shapeType(Modelo mod){
-        String shapeType;
-        shapeType = mod.getShapeType();
+        String shapeType = mod.getShapeType();
+        float area;
         
-        Scanner sc = new Scanner(System.in);
-        
-        if (shapeType.equals("square")) {
-            //add area calculations for square
-            float squareArea;
-            float sideLength;
-
-            System.out.println("what is the side length?");
-            sideLength = sc.nextFloat();
-            squareArea = sideLength * sideLength;
-            System.out.println("The area for your square: " + squareArea);
-
+        switch(shapeType.toLowerCase()){
+            
+            case "square":
+                Vista.sideLenght(mod);
+                
+                area = (float) Math.pow(mod.getLength(), mod.getLength());
+                mod.setArea(area);
+                
+                Vista.showArea(mod);
+                break;
+            
+            case "rectangle":
+                
+                break;
+            
+            case "triangle":
+                
+                break;
+            
+            case "circle":
+                
+                break;
+            
         }
+        
         if (shapeType.equals("rectangle")) {
             //add area calculations for rectangle here
-            float sideLength;
-            float sideHeight;
-            float rectangleArea;
-
+            
             System.out.println("what is the rectangles width?");
             sideLength = sc.nextFloat();
             System.out.println("What is the rectangles height?");
@@ -57,9 +66,7 @@ public class Superficies {
         }
         if (shapeType.equals("triangle")) {
             //add area calculations for triangle here
-            float baseLength;
-            float height;
-            float triangleArea;
+
 
             System.out.println("What is the base length of the triangle?");
             baseLength = sc.nextFloat();
@@ -71,8 +78,7 @@ public class Superficies {
         }
         if (shapeType.equals("circle")) {
             //add area calculations for a circle here
-            float radius;
-            float circleArea;
+            
 
             System.out.println("What is the radius of the circle?");
             radius = sc.nextFloat();
