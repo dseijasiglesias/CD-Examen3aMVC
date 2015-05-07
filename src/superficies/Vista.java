@@ -23,5 +23,15 @@ public class Vista {
         System.out.println("You said: " + shapeType);
     }
     
+    public static void showArea(Modelo mod){
+        System.out.println("The area for your " + mod.getShapeType() + ": " + mod.getArea());
+    }
+    
+    public static void sideLenght(Modelo mod){
+        System.out.println("what is the side length?");
+        mod.setLength(sc.nextFloat());
+    }
+    
+    
     
 }
