@@ -9,21 +9,19 @@ import java.util.Scanner;
  * @author Daniel Seijas
  */
 public class Superficies {
-
-    private static Scanner sc;
-
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         String shapeType;
-
-        sc = new Scanner(System.in);
-
-        System.out.println("What shape would you like to find the area of? (square, circle, triangle, rectangle):");
-        shapeType = sc.nextLine();
-        System.out.println("You said: " + shapeType);
-
+        
+        Modelo mod = new Modelo();
+        Vista.askType(mod);
+        shapeType = mod.getShapeType();
+        
+        
         if (shapeType.equals("square")) {
             //add area calculations for square
             float squareArea;
